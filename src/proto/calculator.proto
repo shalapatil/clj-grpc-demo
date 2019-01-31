@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "io.grpc.calculator";
+option java_outer_classname = "CalculatorProto";
+
+
+package calculator;
+
+service Calculator{
+        rpc Add (EqRequest) returns (EqResponse) {}
+        rpc Subtract (EqRequest) returns (EqResponse) {}
+}
+
+message EqRequest{
+        int32 var_1 = 1;
+        int32 var_2 = 2;
+}
+
+
+message EqResponse{
+        int64 result = 1;
+}
