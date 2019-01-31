@@ -1,36 +1,17 @@
 # clj-grpc-demo
 
-FIXME: description
+Demonstrates how to use GRPC with clojure. Implements basic calculator with only add & subtract function.
 
 ## Installation
 
-Download from http://example.com/FIXME.
+- Need java8
 
 ## Usage
 
-FIXME: explanation
+Project is using lein-protoc plugin which is used to create java client stubs.
 
-    $ java -jar clj-grpc-demo-0.1.0-standalone.jar [args]
 
-## Options
-
-FIXME: listing of options this app accepts.
-
-## Examples
-
-...
-
-### Bugs
-
-...
-
-### Any Other Sections
-### That You Think
-### Might be Useful
-
-## License
-
-Copyright © 2019 FIXME
-
-Distributed under the Eclipse Public License either version 1.0 or (at
-your option) any later version.
+clj-grpc-demo.server> (-main)
+clj-grpc-demo.server> (require 'clj-grpc-demo.client)
+clj-grpc-demo.server> (clj-grpc-demo.client/add 1 1)
+=> 2
